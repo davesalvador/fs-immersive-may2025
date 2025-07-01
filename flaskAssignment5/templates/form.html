@@ -1,0 +1,70 @@
+<!-- <!DOCTYPE html>
+<html>
+    <head>
+        <title>User Info Forms</title>
+    </head>
+    <body>
+        <h2>Enter your information:</h2>
+        <form action="/submit" method="POST">
+
+            <label>First Name:</label>
+            <input type="text" name="first_name" required><br><br>
+            <label>Last Name:</label>
+            <input type="text" name="last_name" required><br><br>
+            <label>State</label>
+            <select name="state" required>
+                {% for state in states %}
+                    <option value="{{ state }}">{{ state }}</option>
+                {% endfor %}
+            </select>
+            <button type="submit">Submit</button>
+        </form>
+    </body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Info Forms</title>
+</head>
+<body>
+    <h2>Enter your information:</h2>
+
+    <!-- Form to collect user information -->
+    <!-- Method POST sends data securely in the request body -->
+    <form action="/submit" method="POST">
+        <!-- Text input for First Name -->
+        <label>First Name:</label>
+        <input type="text" name="first_name" required><br><br>
+
+        <!-- Text input for Last Name -->
+        <label>Last Name:</label>
+        <input type="text" name="last_name" required><br><br>
+
+        <!-- Text input for Email -->
+        <label>Email:</label>
+        <input type="email" name="email" required><br><br>
+
+        <!-- Text input for City -->
+        <label>City:</label>
+        <input type="text" name="city" required><br><br>
+
+        <!-- Dropdown for selecting a state -->
+        <label>State:</label>
+        <select name="state" required>
+            <!-- Loop through the states sent from Flask and display each one -->
+            {% for state in states %}
+                <option value="{{ state }}">{{ state }}</option>
+            {% endfor %}
+        </select><br><br>
+
+        <!-- Text input for Zip Code -->
+        <label>Zip Code:</label>
+        <input type="text" name="zip_code" required><br><br>
+
+        <!-- Submit button to send the form -->
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
