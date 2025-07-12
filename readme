@@ -1,0 +1,23 @@
+Full stack flask 5
+
+flask-login
+flask-WTF
+flask-sqlalchemy
+werkzeug
+
+this is the model
+usermodel 
+
+user
+id
+username
+email
+pw_hash
+posts
+
+postmodel
+
+id 
+body 
+created_at
+author_id
