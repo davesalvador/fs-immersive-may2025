@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Base</title> {# The base title can be overridden in child templates via {% block title %} #}
+</head>
+
+<body>
+    <div>
+        {# If a user is logged in (session contains user_id), show navigation links #}
+        {% if session.user_id %}
+        <div>
+            <a>
+                Feed
+            </a>
+            <a>
+                Logout {{ session.username }}
+            </a>
+
+            {# Actual working links using Flask's url_for #}
+            <a href="{{ url_for('feed') }}">Feed</a>
+            <a href="{{ url_for('logout') }}">Logout</a>
+        </div>
+        {% endif %}
+
+        <div>
+            {# Display flashed messages (e.g., success, error notifications) #}
+            {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                <ul>
+                    {% for message in messages %}
+                    <li>{{ message }}</li>
+                    {% endfor %}
+                </ul>
+                {% endif %}
+            {% endwith %}
+        </div>
+
+        {# Placeholder for child templates to inject their specific content #}
+        {% block content %}{% endblock %}
+    </div>
+</body>
+
+</html>

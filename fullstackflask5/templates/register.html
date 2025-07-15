@@ -1,0 +1,32 @@
+{# Inherit the layout from base.html to reuse common structure (e.g., navbar, footer) #}
+{% extends "base.html" %}
+
+{# Set the page title to "Register" #}
+{% block title %} Register {% endblock %}
+
+{# Start of the content block specific to the register page #}
+{% block content %}
+
+<h1>Register</h1>
+{# Short instruction to guide the user #}
+<p>Create a new account to start blogging!</p>
+
+{# Registration form using POST method to securely send form data #}
+<form method="POST">
+    {# Input field for username – required to continue #}
+    <input type="text" name="username" placeholder="Username" required>
+    
+    {# Input field for email – required and validated as an email address #}
+    <input type="email" name="email" placeholder="Email" required>
+    
+    {# Input field for password – masked input and required #}
+    <input type="password" name="password" placeholder="Password" required>
+    
+    {# Submit button to trigger registration #}
+    <button type="submit">Register</button>
+</form>
+
+{# Link for users who already have an account to go to the login page #}
+<p>Already have an account? <a href="{{ url_for('login') }}">Login here</a></p>
+
+{% endblock %}

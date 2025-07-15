@@ -1,0 +1,28 @@
+{# Extends the base template to include common layout (e.g., header, footer) #}
+{% extends "base.html" %}
+
+{# Sets the title of the page to "Login" #}
+{% block title %} Login {% endblock %}
+
+{# Main content block starts here #}
+{% block content %}
+<h1>Login</h1>
+{# Brief instruction for the user #}
+<p>Enter your credentials to access your account.</p>
+
+{# Login form that uses POST method to submit credentials to the same route #}
+<form method="POST">
+    {# Input for username, required to proceed #}
+    <input type="text" name="username" placeholder="Username" required>
+    
+    {# Input for password, also required #}
+    <input type="password" name="password" placeholder="Password" required>
+    
+    {# Button to submit the form #}
+    <button type="submit">Login</button>
+</form>
+
+{# Link for users who don't have an account yet; redirects to the registration page #}
+<p>Don't have an account? <a href="{{ url_for('register') }}">Register here</a></p>
+
+{% endblock %}

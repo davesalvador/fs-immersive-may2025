@@ -1,0 +1,29 @@
+{# Extend the base template to include shared layout (e.g., navbar, footer) #}
+{% extends "base.html" %}
+
+{# Set the page title to be displayed in the browser tab #}
+{% block title %}Flask Blog - Home{% endblock %}
+
+{# Start of the content section for the home page #}
+{% block content %}
+<h1>Welcome to Flask Blog</h1>
+{# Short description of the application #}
+<p>A simple blog site built with Flask!</p>
+
+<h2>Get Started</h2>
+<p>Choose an option below:</p>
+
+{# Buttons for navigating to Login and Register pages #}
+<div style="margin: 20px 0;">
+    {# Link to login page wrapped around a button #}
+    <a href="{{ url_for('login') }}">
+        <button>Login</button>
+    </a>
+
+    {# Link to register page wrapped around a button #}
+    <a href="{{ url_for('register') }}">
+        <button>Register</button>
+    </a>
+</div>
+
+{% endblock %}
