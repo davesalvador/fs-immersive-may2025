@@ -10,7 +10,8 @@
 //   return (
 //     <div>
 //       <h1>My favorite color is: {color}</h1>
-//       <button type='button' onClick={() => setColor("blue")}>
+
+//       <button type='button' onClick={() => setColor("blue")}> //so when we click the setcolor it should changed the current color to blue
 //         Change color
 //       </button>
 //     </div>
@@ -58,12 +59,15 @@ function Car() {
     color: "Red"
   })
 
+  // if you want to update just one object value
 // const updateColor = () => {
 //   setCar(previousState => {
 //     return { ...previousState, color: "Blue" }
 //   })
 // }
 
+
+//when you want to change all of the object value
 const changeCar = () => {
   setCar({
     brand: "Tesla",
