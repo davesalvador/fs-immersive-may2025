@@ -1,10 +1,10 @@
 import React from 'react'
-import Contacts from './contacts'
+
 
 function home() {
   return (
     <div>
-        <Contacts />
+     Hi im home
     </div>
   )
 }
