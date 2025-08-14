@@ -20,7 +20,7 @@ function App() {
     <>
       <BrowserRouter>
         <Routes>
-          
+          {/* {/* Public routes */}
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
           <Route path="/contacts" element={<Contacts />} />
@@ -36,6 +36,7 @@ function App() {
               </ProtectedRoute>
             }
           />
+
         </Routes>
       </BrowserRouter>
     </>
