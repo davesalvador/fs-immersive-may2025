@@ -1,0 +1,10 @@
+Use the existing RESTful API that you have created in MongoDB assignment 1 and create a react frontend for it.  
+
+Requirements:
+
+Your react front end should be able to:
+Retrieve a list of all books in your database and display them in the browser.
+Retrieve details of a specific book by ID, and display that in the browser
+Add a new book to the collection using a form on the front end for data input
+Update details of a book by ID, using a form on the front end for input
+Delete a book from the data base after clicking a link or a button on the front end
